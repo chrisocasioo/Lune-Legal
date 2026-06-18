@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lune Cycle Tracker — Santrico Apps</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #FDF0F3;
+      color: #2D1B2E;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(232,84,122,0.10);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #E8547A;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-links a {
+      color: #8C6B72;
+      text-decoration: none;
+      font-size: 0.92rem;
+      margin-left: 24px;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: #E8547A; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 24px 80px;
+    }
+    .hero {
+      text-align: center;
+      max-width: 560px;
+    }
+    .hero-icon {
+      font-size: 4rem;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #2D1B2E;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .hero h1 span { color: #E8547A; }
+    .hero p {
+      font-size: 1.05rem;
+      color: #8C6B72;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .badge {
+      display: inline-block;
+      background: #E8547A;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+      letter-spacing: 0.3px;
+    }
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 720px;
+      margin-top: 48px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(232,84,122,0.10);
+      padding: 32px 28px;
+      flex: 1;
+      min-width: 240px;
+      max-width: 320px;
+      text-align: center;
+    }
+    .card-icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: #2D1B2E; }
+    .card p { font-size: 0.88rem; color: #8C6B72; line-height: 1.6; margin-bottom: 18px; }
+    .card a {
+      display: inline-block;
+      color: #E8547A;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      border: 1.5px solid #E8547A;
+      border-radius: 8px;
+      padding: 7px 18px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .card a:hover { background: #E8547A; color: #fff; }
+    .features {
+      margin-top: 60px;
+      max-width: 560px;
+      width: 100%;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #2D1B2E;
+    }
+    .feature-list { list-style: none; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f3dde3;
+      font-size: 0.95rem;
+      color: #2D1B2E;
+      line-height: 1.5;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list li span:first-child { font-size: 1.2rem; flex-shrink: 0; }
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+      color: #8C6B72;
+      background: #fff;
+      border-top: 1px solid #f3dde3;
+    }
+    footer a { color: #E8547A; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 1.7rem; }
+      .cards { flex-direction: column; align-items: center; }
+      .card { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">🌙 Lune</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <div class="hero-icon">🌙</div>
+      <span class="badge">iOS App · Rated 4+</span>
+      <h1>Lune <span>Cycle</span> Tracker</h1>
+      <p>A beautifully simple, fully private menstrual cycle tracker. Everything lives on your device — no accounts, no cloud, no data sharing. Just you and your cycle.</p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h2>Privacy Policy</h2>
+        <p>Learn how Lune protects your data — and why we can't access any of it, even if we wanted to.</p>
+        <a href="privacy.html">Read Policy →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h2>Support</h2>
+        <p>Find answers to common questions or reach out to the Santrico Apps team directly.</p>
+        <a href="support.html">Get Help →</a>
+      </div>
+    </div>
+
+    <div class="features">
+      <h2>Why Lune?</h2>
+      <ul class="feature-list">
+        <li><span>📍</span><span>All data stored locally on your iPhone — never leaves your device</span></li>
+        <li><span>🚫</span><span>No account required, no sign-up, no email needed</span></li>
+        <li><span>📊</span><span>No analytics or tracking SDKs — we don't collect any usage data</span></li>
+        <li><span>🔔</span><span>Optional local reminders — processed entirely on-device</span></li>
+        <li><span>🗑️</span><span>Uninstalling the app permanently deletes all your data</span></li>
+        <li><span>👧</span><span>Safe for all ages — rated 4+ on the App Store</span></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Santrico Apps &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+    <p style="margin-top:6px;">Questions? <a href="mailto:Santrico.support@gmail.com">Santrico.support@gmail.com</a></p>
+  </footer>
+</body>
+</html>

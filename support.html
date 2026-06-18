@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Lune Cycle Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #FDF0F3;
+      color: #2D1B2E;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(232,84,122,0.10);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #E8547A;
+      text-decoration: none;
+    }
+    .nav-links a {
+      color: #8C6B72;
+      text-decoration: none;
+      font-size: 0.92rem;
+      margin-left: 24px;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #E8547A; font-weight: 600; }
+    main {
+      flex: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      width: 100%;
+    }
+    .page-header {
+      margin-bottom: 36px;
+    }
+    .page-header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2D1B2E;
+      margin-bottom: 8px;
+    }
+    .page-header p { color: #8C6B72; font-size: 0.9rem; }
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(232,84,122,0.09);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      text-align: left;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #2D1B2E;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-family: inherit;
+      transition: color 0.15s;
+    }
+    .faq-question:hover { color: #E8547A; }
+    .faq-question .arrow {
+      color: #E8547A;
+      font-size: 1.2rem;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item.open .arrow { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 0 28px 22px;
+      font-size: 0.93rem;
+      color: #2D1B2E;
+      line-height: 1.75;
+      border-top: 1px solid #f3dde3;
+      padding-top: 16px;
+    }
+    .faq-answer-inner a { color: #E8547A; }
+    .contact-section {
+      margin-top: 48px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(232,84,122,0.09);
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #2D1B2E;
+      margin-bottom: 10px;
+    }
+    .contact-section p {
+      color: #8C6B72;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      max-width: 420px;
+      margin: 0 auto 28px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: #E8547A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(232,84,122,0.30);
+      transition: background 0.15s, transform 0.1s;
+    }
+    .contact-btn:hover { background: #d4446a; transform: translateY(-1px); }
+    .contact-email {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #8C6B72;
+    }
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+      color: #8C6B72;
+      background: #fff;
+      border-top: 1px solid #f3dde3;
+    }
+    footer a { color: #E8547A; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .faq-question { padding: 18px 20px; }
+      .faq-answer-inner { padding: 0 20px 18px; padding-top: 14px; }
+      .contact-section { padding: 28px 20px; }
+      .page-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-brand">🌙 Lune</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" class="active">Support</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="page-header">
+      <h1>Support</h1>
+      <p>Lune Cycle Tracker &nbsp;·&nbsp; Santrico Apps</p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq-item open">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I log my cycle?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Tap the calendar on the home screen and select the first day of your period. Then tap <strong>Log Period</strong>. Lune will automatically predict your next cycle based on your history. You can also add symptoms, notes, or mood entries by tapping any date.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Is my data backed up or synced anywhere?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          No. All of your data is stored <strong>only on your device</strong> using local storage. It is never sent to our servers, synced to iCloud, or shared with any third party. This means your information is completely private — but it also means data cannot be recovered if you uninstall the app or get a new phone without first exporting it.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        How do I set up reminders?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Go to <strong>Settings → Notifications</strong> inside the app. You can enable reminders for your upcoming period, ovulation window, or custom dates. When prompted, allow Lune to send notifications. All reminders are local — they are scheduled on your device and do not require an internet connection.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        I deleted the app. Can I recover my data?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Unfortunately, no. Because your data is stored locally on your device and not backed up to any server or cloud, uninstalling Lune permanently deletes all app data. This is by design — it means your sensitive health information can never be accessed by anyone else, including us. We recommend using the export feature (if available) before deleting the app.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        The app is not tracking my cycle correctly. What should I do?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Lune's predictions improve over time as more cycle data is logged. For best results, log the <strong>first day of your period</strong> consistently each cycle. If predictions still seem off, you can manually adjust your average cycle length in <strong>Settings → Cycle Settings</strong>. If the issue persists, please contact us and we'll be happy to help.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" onclick="toggleFaq(this)">
+        Which iOS versions and devices are supported?
+        <span class="arrow">&#8964;</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Lune Cycle Tracker is available exclusively on <strong>iOS</strong>. It requires iOS 15.0 or later and is compatible with all iPhones supported by that iOS version. The app is optimized for both standard and larger iPhone screen sizes.
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-section">
+      <h2>Still need help?</h2>
+      <p>Our team at Santrico Apps is happy to assist. Send us an email and we'll get back to you within 5 business days.</p>
+      <a href="mailto:Santrico.support@gmail.com?subject=Lune%20Cycle%20Tracker%20Support" class="contact-btn">Email Support</a>
+      <p class="contact-email">Santrico.support@gmail.com</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Santrico Apps &nbsp;·&nbsp; <a href="index.html">Home</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="support.html">Support</a></p>
+    <p style="margin-top:6px;">Questions? <a href="mailto:Santrico.support@gmail.com">Santrico.support@gmail.com</a></p>
+  </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      var item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
